@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
         
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Calculator'),
     );
   }
 }
@@ -33,7 +33,21 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: new Container()
+      body: new Container(
+
+        child: new Column(children: <Widget>[
+          new Text("0"),
+          new MaterialButton(
+            child: new Text("1"),
+            onPressed: () => {},
+            color: Colors.blueGrey,
+            textColor: Colors.white,
+          )
+        ],)
+
+        
+
+      )
     );
   }
 }
