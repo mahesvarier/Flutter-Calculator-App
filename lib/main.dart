@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,6 +28,18 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+Widget buildButton(){
+  return new Expanded(
+                  child: new MaterialButton(
+                    child: new Text("3"),
+                    onPressed: () => {},
+                    color: Colors.blueGrey,
+                    textColor: Colors.white,
+                  ),
+                );
+}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,38 +57,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
             new Row(
               children: [
-                new Expanded(
-                  child: new MaterialButton(
-                    child: new Text("1"),
-                    onPressed: () => {},
-                    color: Colors.blueGrey,
-                    textColor: Colors.white,
-                  ),
-                ),
-                new Expanded(
-                  child: new MaterialButton(
-                    child: new Text("2"),
-                    onPressed: () => {},
-                    color: Colors.blueGrey,
-                    textColor: Colors.white,
-                  ),
-                ),
-                new Expanded(
-                  child: new MaterialButton(
-                    child: new Text("3"),
-                    onPressed: () => {},
-                    color: Colors.blueGrey,
-                    textColor: Colors.white,
-                  ),
-                ),
-                new Expanded(
-                  child: new MaterialButton(
-                    child: new Text("4"),
-                    onPressed: () => {},
-                    color: Colors.blueGrey,
-                    textColor: Colors.white,
-                  ),
-                ),
+                buildButton(),
+                buildButton(),
+                buildButton()
               ],
             )
           ],
