@@ -8,7 +8,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Calculator'),
@@ -28,26 +27,56 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: new Container(
+        appBar: AppBar(
+          title: Text(widget.title),
+        ),
+        body: new Container(
+            child: new Column(
+          children: <Widget>[
+            new Text("0"),
 
-        child: new Column(children: <Widget>[
-          new Text("0"),
-          new MaterialButton(
-            child: new Text("1"),
-            onPressed: () => {},
-            color: Colors.blueGrey,
-            textColor: Colors.white,
-          )
-        ],)
+            new Expanded(
+              child: new Divider()
+            ),
 
-        
-
-      )
-    );
+            new Row(
+              children: [
+                new Expanded(
+                  child: new MaterialButton(
+                    child: new Text("1"),
+                    onPressed: () => {},
+                    color: Colors.blueGrey,
+                    textColor: Colors.white,
+                  ),
+                ),
+                new Expanded(
+                  child: new MaterialButton(
+                    child: new Text("2"),
+                    onPressed: () => {},
+                    color: Colors.blueGrey,
+                    textColor: Colors.white,
+                  ),
+                ),
+                new Expanded(
+                  child: new MaterialButton(
+                    child: new Text("3"),
+                    onPressed: () => {},
+                    color: Colors.blueGrey,
+                    textColor: Colors.white,
+                  ),
+                ),
+                new Expanded(
+                  child: new MaterialButton(
+                    child: new Text("4"),
+                    onPressed: () => {},
+                    color: Colors.blueGrey,
+                    textColor: Colors.white,
+                  ),
+                ),
+              ],
+            )
+          ],
+        )));
   }
 }
